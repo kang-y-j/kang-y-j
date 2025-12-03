@@ -1,4 +1,4 @@
-<h1 align="center">강영재 | AI Service Engineer</h1>
+<h1 align="center">강영재의 Resume!</h1>
 
 <p align="center">
   LLM · RAG · LangChain · Python 기반 AI 서비스 개발을 목표로 학습하고 있습니다.  
