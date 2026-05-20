@@ -131,17 +131,17 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
 전주시 공공데이터를 활용해 버스정류장·도시공원·공영주차장을 한 화면에서 탐색할 수 있는 인터랙티브 지도 웹 애플리케이션
 
 - **Category**: GIS / 공공데이터 / Web
-- - **Tech**: Python, FastAPI, Pandas, Leaflet.js, HTML/CSS/JS
-  - - **Highlights**
-    -   - 전주시 공공데이터 전처리 및 인코딩 변환 파이프라인 구축
-        -   - Geolocation API 기반 내 위치 감지 및 반경 필터링 (1/5/10km)
-            -   - OSM Nominatim API 활용 주소 지오코딩
-                -   - Railway 클라우드 배포
-                    -
-                    👉 [프로젝트 상세: jeonju_map Repository](https://github.com/kang-y-j/jeonju_map) | [배포 URL](https://web-production-de371.up.railway.app/)
+- **Tech**: Python, FastAPI, Pandas, Leaflet.js, HTML/CSS/JS
+- **Highlights**
+  - 전주시 공공데이터 전처리 및 인코딩 변환 파이프라인 구축
+  - Geolocation API 기반 내 위치 감지 및 반경 필터링 (1/5/10km)
+  - OSM Nominatim API 활용 주소 지오코딩
+  - Railway 클라우드 배포
+                 
+  - 👉 [프로젝트 상세: jeonju_map Repository](https://github.com/kang-y-j/jeonju_map) | [배포 URL](https://web-production-de371.up.railway.app/)
+  
+  ---
 
-                    ---
-                    ---
 
 ## Contact
 
