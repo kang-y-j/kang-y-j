@@ -137,8 +137,8 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
   - Geolocation API 기반 내 위치 감지 및 반경 필터링 (1/5/10km)
   - OSM Nominatim API 활용 주소 지오코딩
   - Railway 클라우드 배포
-                 
-  - 👉 [프로젝트 상세: jeonju_map Repository](https://github.com/kang-y-j/jeonju_map) | [배포 URL](https://web-production-de371.up.railway.app/)
+
+👉 [프로젝트 상세: jeonju_map Repository](https://github.com/kang-y-j/jeonju_map) | [배포 URL](https://web-production-de371.up.railway.app/)
   
   ---
 
