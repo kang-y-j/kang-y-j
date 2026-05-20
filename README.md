@@ -89,7 +89,7 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
   - 텍스트 + 이미지 멀티모달 입력 처리
   - LangChain/LangGraph 기반 Agent 구조
 
-👉 [프로젝트 상세: AI Lecture Agent Repository](https://github.com/kang-y-j/kt20250924-1)
+👉 [프로젝트 상세: AI Lecture Agent Repository](https://github.com/kang-y-j/ai-lecture-agent)
 
 ---
 
