@@ -1,6 +1,6 @@
 # 강영재 | AI Service Engineer Portfolio
 
-> LLM · RAG · LangChain · Python 기반 AI 서비스 개발을 목표로 학습하고 있습니다.
+> LLM · RAG · CrewAI · LangChain · Python 기반 AI 서비스 개발을 목표로 학습하고 있습니다.
 > 데이터를 분석하고, 모델을 실제 서비스 흐름에 연결하여 실질적인 가치를 만드는 것을 목표로 합니다.
 
 ---
@@ -23,6 +23,7 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며 LangCha
 ## Tech Stack
 
 ### Currently Available Skills
+
 > 프로젝트에서 실제로 사용한 기술 중심
 
 | 분야 | 기술 |
@@ -34,6 +35,7 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며 LangCha
 | 개발 환경 | Git, GitHub, Colab, Jupyter |
 
 ### Learning & Upcoming Skills
+
 > 학습 및 실습을 통해 확장 중인 기술 영역
 
 | 분야 | 기술 |
@@ -44,8 +46,7 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며 LangCha
 | 멀티모달 | 이미지 + 텍스트 입력 처리 |
 | Speech | TTS 활용 |
 | 딥러닝 | PyTorch |
-| 배포 / 환경 | Docker, 간단한 클라우드 배포 |
-| MLOps | 모델 서빙, 파이프라인 자동화 |
+| 배포 / 환경 | 간단한 클라우드 배포 |
 | DB | 기초 SQL |
 
 ---
@@ -54,16 +55,17 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며 LangCha
 
 - LangChain/LangGraph 기반 파이프라인 설계 경험
 - 전처리, 임베딩, 검색 기반 RAG 구성 경험
+- CrewAI 멀티 에이전트 워크플로우 설계 및 구현 경험
 - 멀티모달/Agent 기반 서비스 구조 설계 경험 (학습 및 실습 중심)
 
 ---
 
-## Education & Certifications (Preparing)
+## Education & Certifications
 
+- TOEIC Speaking: IM2 (2026.04)
 - KT Aivle School 8기 수료(AI Track)
-- AICE Associate(2025.02)
-- TOEIC Speaking: IM2 (2025.03)
-- 정보처리기사 — 2026 상반기 예정
+- AICE Associate(2026.02)
+- 정보처리기사 — 필기 합격 (2025.06)
 
 ---
 
@@ -74,7 +76,6 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며 LangCha
 ## Projects
 
 > 아래 프로젝트들은 학습 및 실습 목적의 프로젝트로, 각각 특정 기능이나 구조에 초점을 두고 구현했습니다.
-> 모든 기능을 완전 자동화하거나 상용 수준으로 구현한 것은 아닙니다. 각 Repository는 단계적으로 업데이트될 예정입니다.
 
 ---
 
@@ -83,17 +84,17 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며 LangCha
 PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음성 강의까지 자동 생성하는 AI Agent
 
 - **Category**: LLM Agent / Multimodal
-- **Tech**: LangChain, LangGraph(OpenAI API), Python, TTS
+- **Tech**: LangChain, LangGraph, OpenAI API, Python, TTS
 - **Highlights**
   - 슬라이드 단위 상태(State) 관리
   - 텍스트 + 이미지 멀티모달 입력 처리
   - LangChain/LangGraph 기반 Agent 구조
 
-👉 [프로젝트 상세: AI Lecture Agent Repository](https://github.com/kang-y-j/ai-lecture-agent)
+👉 [프로젝트 상세: AI Lecture Agent Repository](https://github.com/kang-y-j/kt20250924-1)
 
 ---
 
-### 2) LLM 기반 AI 면접관 Agent
+### 2) LLM 기반 AI 면접관 Agent v1
 
 이력서를 기반으로 질문을 생성하고 답변을 평가하여 후속 질문을 결정하는 인터뷰 Agent
 
@@ -104,11 +105,35 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
   - 답변 점수 기반 인터뷰 분기 로직
   - RAG를 활용한 맥락 유지 질문 생성
 
-👉 [프로젝트 상세: AI Interview Agent Repository](https://github.com/kang-y-j/ai-interview-agent)
+👉 [프로젝트 상세: AI Interview Agent v1 Repository](https://github.com/kang-y-j/ai-interview-agent)
 
 ---
 
-### 3) EV Charger Ops Platform — 전기차 충전소 통합 관제 시스템
+### 3) LLM 기반 AI 면접관 Agent v2 — CrewAI 멀티 에이전트로 고도화
+
+v1의 단일 파이프라인을 CrewAI 멀티 에이전트로 고도화하고 Streamlit 웹 UI를 추가한 버전
+
+- **Category**: Multi-Agent / RAG / Web UI
+- **Tech**: CrewAI, LangChain, FAISS, OpenAI API, Streamlit, Python
+- **v1 → v2 발전 포인트**
+
+| | v1 | v2 |
+|---|---|---|
+| 아키텍처 | 단일 파이프라인 | 멀티 에이전트 |
+| 이력서 분석 | 직접 입력 | RAG 자동 검색 |
+| UI | 없음 (CLI) | Streamlit 웹 UI |
+| 에이전트 수 | 1개 | 면접관 + 평가자 |
+
+- **Highlights**
+  - 이력서 PDF를 RAG로 벡터화하여 관련 내용 자동 검색
+  - CrewAI 면접관 에이전트 → 질문 생성, 평가자 에이전트 → 답변 평가
+  - Streamlit 웹 UI로 PDF 업로드부터 평가까지 한 화면에서 처리
+
+👉 [프로젝트 상세: AI Interview Agent v2 Repository](https://github.com/kang-y-j/ai-interview-agent-v2)
+
+---
+
+### 4) EV Charger Ops Platform — 전기차 충전소 통합 관제 시스템
 
 센서 데이터와 이미지를 AI로 분석해 충전기 이상을 감지하고, 운영자에게 자동 알림을 발송하는 충전소 관리 플랫폼
 
@@ -125,28 +150,12 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
 
 👉 [프로젝트 상세: EV Charger Ops Platform Repository](https://github.com/kang-y-j/ev-charger-ops-platform)
 
-
-### 4) 전주시 생활 편의시설 지도 시각화
-
-전주시 공공데이터를 활용해 버스정류장·도시공원·공영주차장을 한 화면에서 탐색할 수 있는 인터랙티브 지도 웹 애플리케이션
-
-- **Category**: GIS / 공공데이터 / Web
-- **Tech**: Python, FastAPI, Pandas, Leaflet.js, HTML/CSS/JS
-- **Highlights**
-  - 전주시 공공데이터 전처리 및 인코딩 변환 파이프라인 구축
-  - Geolocation API 기반 내 위치 감지 및 반경 필터링 (1/5/10km)
-  - OSM Nominatim API 활용 주소 지오코딩
-  - Railway 클라우드 배포
-
-👉 [프로젝트 상세: jeonju_map Repository](https://github.com/kang-y-j/jeonju_map) | [배포 URL](https://web-production-de371.up.railway.app/)
-  
-  ---
-
+---
 
 ## Contact
 
 - **Email**: kfccckyj@naver.com
-- **GitHub**: [https://github.com/kang-y-j](https://github.com/kang-y-j)
+- **GitHub**: https://github.com/kang-y-j
 
 ---
 
