@@ -109,25 +109,32 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
 
 ---
 
-### 3) LLM 기반 AI 면접관 Agent v2 — CrewAI 멀티 에이전트로 고도화
+### 3) LLM 기반 AI 면접관 Agent v2 — CrewAI 멀티 에이전트 + 배포
 
-v1의 단일 파이프라인을 CrewAI 멀티 에이전트로 고도화하고 Streamlit 웹 UI를 추가한 버전
+이력서 PDF를 RAG로 분석해 맞춤 면접 질문을 생성하고, 답변 평가·꼬리질문·종합
+피드백까지 제공하는 AI 면접관. **FastAPI 백엔드 + Streamlit 프론트로 분리 설계**
+하고 **Hugging Face Spaces에 배포해 라이브 운영** 중입니다.
 
-- **Category**: Multi-Agent / RAG / Web UI
-- **Tech**: CrewAI, LangChain, FAISS, OpenAI API, Streamlit, Python
+- **Category**: Multi-Agent / RAG / Web Service / Deployed
+- **Tech**: CrewAI, LangChain, FAISS, FastAPI, Streamlit, OpenAI(gpt-4o-mini), Python
+- **🚀 Live Demo**: https://kfccckyj-ai-interview-agent.hf.space
+
 - **v1 → v2 발전 포인트**
 
 | | v1 | v2 |
 |---|---|---|
-| 아키텍처 | 단일 파이프라인 | 멀티 에이전트 |
-| 이력서 분석 | 직접 입력 | RAG 자동 검색 |
+| 아키텍처 | 단일 파이프라인 | 멀티 에이전트 + 백엔드/프론트 분리 |
+| 이력서 분석 | 직접 입력 | RAG 자동 검색 (PDF 업로드) |
 | UI | 없음 (CLI) | Streamlit 웹 UI |
-| 에이전트 수 | 1개 | 면접관 + 평가자 |
+| 기능 | 질문·평가 | 직무/난이도 맞춤 · 자동 꼬리질문 · 종합 피드백 |
+| 배포 | 로컬 | Hugging Face Spaces (라이브) |
 
 - **Highlights**
-  - 이력서 PDF를 RAG로 벡터화하여 관련 내용 자동 검색
-  - CrewAI 면접관 에이전트 → 질문 생성, 평가자 에이전트 → 답변 평가
-  - Streamlit 웹 UI로 PDF 업로드부터 평가까지 한 화면에서 처리
+  - 이력서 PDF를 RAG로 벡터화(FAISS)하여 직무·수준 맞춤 질문 생성
+  - CrewAI 멀티 에이전트: 면접관(질문/꼬리질문) + 코치(평가/종합 피드백)
+  - FastAPI로 API 분리 설계 — 입력 검증(Pydantic), API 키 인증, CORS 제한
+  - 보안 강화: 파일 업로드 검증, 프롬프트 인젝션 완화, 비밀키 환경변수 분리
+  - Hugging Face Spaces 배포 — 설치 없이 브라우저에서 바로 체험 가능
 
 👉 [프로젝트 상세: AI Interview Agent v2 Repository](https://github.com/kang-y-j/ai-interview-agent-v2)
 
