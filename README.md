@@ -31,7 +31,7 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며, LangCh
 | ML / 데이터 | NumPy, Pandas, Scikit-learn(기초), LightGBM, 데이터 전처리 및 EDA |
 | LLM 파이프라인 | LangChain · LangGraph 기반 파이프라인 구성, OpenAI API |
 | LLM Agent | CrewAI 기반 멀티 에이전트 구조 설계 |
-| RAG 구성 | 문서 임베딩 생성(OpenAI), FAISS / ChromaDB 기반 검색 RAG 설계 |
+| RAG 구성 | 문서 임베딩 생성(OpenAI), FAISS 기반 검색 RAG 설계 |
 | Backend | FastAPI 기반 모델 서빙 API 구성 및 배포 경험 |
 | 개발 환경 | Git, GitHub, Colab, Jupyter, Hugging Face Spaces |
 
