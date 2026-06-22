@@ -92,7 +92,7 @@ AI 기능을 활용한 서비스 개발에 흥미를 가지고 있으며, LangCh
   * 이력서 PDF를 FAISS로 벡터화해 질문 근거를 확보, 할루시네이션 개선
   * FastAPI 백엔드로 분리해 Hugging Face Spaces에 배포, 현재도 운영 중
 
-👉 [프로젝트 상세: AI Interview Agent Repository](https://github.com/kang-y-j/ai-interview-agent)
+👉 [프로젝트 상세: AI Interview Agent Repository](https://github.com/kang-y-j/ai-interview-agent-v2)
 
 ---
 
@@ -107,7 +107,7 @@ PPT 파일을 입력하면 슬라이드 분석부터 설명 스크립트 및 음
   * 텍스트 + 이미지 멀티모달 입력 처리
   * LangGraph 기반 Agent 흐름 제어
 
-👉 [프로젝트 상세: AI Lecture Agent Repository](https://github.com/kang-y-j/kt20250924-1)
+👉 [프로젝트 상세: AI Lecture Agent Repository](https://github.com/kang-y-j/multimodal-lecture-agent)
 
 ---
 
